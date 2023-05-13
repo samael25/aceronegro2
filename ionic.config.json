@@ -1,0 +1,7 @@
+{
+  "name": "aceronegro2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
