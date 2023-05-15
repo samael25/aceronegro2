@@ -24,3 +24,67 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+@import "../node_modules/ngx-spinner/animations/ball-scale-multiple.css";
+
+
+ion-menu-button {
+    color: var(--ion-color-primary);
+}
+
+ion-item {
+    --background: transparent;
+}
+
+.select-icon {
+    width: none !important;
+}
+// .btn-2{
+//     position: relative;
+//     text-decoration: none;
+//     color:#fdefef;
+//     letter-spacing: 2.5px;
+// }
+
+// .btn-2{
+//     border: 1px solid;
+//     border-radius: 23px;
+// }
+
+// .btn-2:hover{
+//     background-color: #001a2b;
+//     box-shadow: 0 0 20px var(--color);
+//     border-color: var(--color);
+// }
+
+ion-label {
+    border-color: rgb(95, 95, 93);
+    top: -0.1rem;
+    font-weight: 600;
+    // padding: 0 20px;
+    transition: 2s;
+    --background: rgba(5,7,12, 0.30);
+}
+
+ion-item{
+    margin-top: 15px;
+}
+
+.flex-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.it {
+    box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+ion-card {
+    box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.3);
+
+}
+

@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="warning" (click)="cancel()">Cancel</ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">{{isEditable ? 'Actualizar': 'Agregar'}} Metodo Contacto</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="primary" (click)="onSubmit()">Confirm</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding back" mode="md">
+  <div class="flex-content">
+    <ion-card class="ion-padding">
+
+      <form [formGroup]="metodoContactoForm" (ngSubmit)="onSubmit()">
+
+        <ion-item *ngIf="!isEditable" class="it" fill="outline">
+          <ion-label position="floating" class="text-color-primary">Tipo Metodo Contacto</ion-label>
+          <ion-select formControlName="IdTipoMetodoContacto">
+            <ion-select-option *ngFor="let item of tiposMetodoContacto$ | async" [value]="item.IdTipoMetodoContacto">{{item.Nombre}}</ion-select-option>
+          </ion-select>
+          <ion-icon color="primary" slot="end" name="people-outline"></ion-icon>
+        </ion-item>
+        <ion-error-message [control]="form.IdTipoMetodoContacto" nomCampo="Tipo Metodo Contacto"></ion-error-message> 
+
+        <ion-item class="it" fill="outline">
+          <ion-label position="floating" class="text-color-primary">Metodo Contacto</ion-label>
+          <ion-input color="primary" type="text" formControlName="Nombre" placeholder="Metodo de Contacto"></ion-input>
+          <ion-icon *ngIf="form.IdTipoMetodoContacto.value == 1" color="primary" slot="end" name="call-outline"></ion-icon>
+          <ion-icon *ngIf="form.IdTipoMetodoContacto.value == 2" color="primary" slot="end" name="mail-outline"></ion-icon>
+        </ion-item>
+        <ion-error-message [control]="form.Nombre" nomCampo="Nombre"></ion-error-message>
+        <br>
+
+        <ion-item class="it" fill="outline">
+          <ion-label position="floating" class="text-color-primary">Descripcion</ion-label>
+          <ion-textarea color="primary" formControlName="Descripcion"></ion-textarea>
+        </ion-item>
+        <ion-error-message [control]="form.Descripcion" nomCampo="Descripcion"></ion-error-message>
+        <br>
+
+        <ion-item class="it" fill="outline">
+          <ion-label>Principal</ion-label>
+            <ion-toggle formControlName="Principal">Principal</ion-toggle>
+        </ion-item>
+
+      </form>
+    </ion-card>
+  </div>
+</ion-content>

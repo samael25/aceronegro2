@@ -1,36 +1,19 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AceroNegroPage } from './acero-negro/acero-negro.page';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'aceronegro',
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+    path: 'aceronegro',
+    component: AceroNegroPage,
+    loadChildren: () => import('./acero-negro/acero-negro.module').then( m => m.AceroNegroPageModule)
   },
-  {
-    path: 'personaje',
-    loadChildren: () => import('./personaje/personaje.module').then( m => m.PersonajePageModule)
-  },
-  {
-    path: 'reino',
-    loadChildren: () => import('./reino/reino.module').then( m => m.ReinoPageModule)
-  },
-  {
-    path: 'seniorio',
-    loadChildren: () => import('./seniorio/seniorio.module').then( m => m.SeniorioPageModule)
-  },
-  {
-    path: 'moneda',
-    loadChildren: () => import('./moneda/moneda.module').then( m => m.MonedaPageModule)
-  },
-  {
-    path: 'habilidad',
-    loadChildren: () => import('./habilidad/habilidad.module').then( m => m.HabilidadPageModule)
-  }
+  
 ];
 
 @NgModule({

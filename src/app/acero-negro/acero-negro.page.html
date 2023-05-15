@@ -1,0 +1,41 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay" class="ion-padding">
+      <ion-content class="ion-padding back">
+
+        <ion-title color="light" class="ion-text-center">Acero Negro</ion-title>
+        <div class="hr"> </div>
+
+        <div class="di">
+          <img src="assets/15.png" />
+        </div>
+
+        <ion-menu-toggle auto-hide="false" *ngFor="let p of usuarioMenu; let i = index">
+          <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
+            <ion-icon color="light" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-outline'"></ion-icon>
+            <ion-label color="light">{{ p.title }}</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-list-header>Labels</ion-list-header>
+        <ion-item *ngFor="let label of labels" lines="none">
+          <ion-icon color="light" slot="start" ios="bookmark-outline" md="bookmark-outline"></ion-icon>
+          <ion-label color="light">{{ label }}</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-icon color="light" slot="start" ios="bookmark-outline" md="bookmark-outline"></ion-icon>
+          <!-- <ion-label (click)="onLogOut()" color="light">LogOut</ion-label> -->
+        </ion-item>
+
+      </ion-content>
+
+      <ion-footer>
+        <ion-toolbar>
+          <h2>Luis Anzua</h2>
+        </ion-toolbar>
+      </ion-footer>
+
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

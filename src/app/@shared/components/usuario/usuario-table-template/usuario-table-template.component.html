@@ -1,0 +1,41 @@
+<ion-content class="back">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col *ngFor="let item of _data" size-lg="6" size-md="6" size-sm="6">
+        <!-- <ion-img src="{{item.img}}"></ion-img> -->
+
+        <ion-card class="ion-padding">
+          <div class="di">
+            <img src="assets/15.png" />
+          </div>
+          <!-- <ion-list> -->
+            <ion-item>
+              <ion-label>
+                <h2>{{item.Nombre}}</h2>
+                <h3>{{item.metodosContacto[0]?.Nombre}}</h3>
+                <h4>{{item.metodosContacto[1]?.Nombre}}</h4>
+                <h4>{{item.tipoUsuario.Nombre}}</h4>
+              </ion-label>
+            </ion-item>
+          <!-- </ion-list> -->
+          <div class="row">
+            <div class="col">
+
+              <ion-button (click)="onClick('edit', item)" expand="block" shape="round">
+                Editar
+              </ion-button>
+              <ion-button class="btn-2" (click)="onClick('delete', item)" expand="block" shape="round">
+                Borrar
+              </ion-button>
+              <ion-button class="btn-1" (click)="onClick('detail', item)" expand="block" shape="round">
+                Detalle
+              </ion-button>
+
+            </div>
+          </div>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

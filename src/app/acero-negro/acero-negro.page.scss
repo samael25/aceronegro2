@@ -1,0 +1,35 @@
+.back {
+    --background: var(--ion-color-dark) url('../../assets/1.png') no-repeat center/cover;
+    text-align: center;
+  }
+  
+  ion-title {
+    margin-top: 15px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .hr {
+    border-bottom: 1px solid #ccc;
+    margin: 10px 0;
+    width: 100%;
+  }
+  
+  .di {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  img {
+    margin-top: 5px;
+    margin-bottom: -5px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 2px solid ;
+    --background: rgba(102, 107, 105, 0.2);
+  }

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="warning" (click)="cancel()">Cancel</ion-button>
+    </ion-buttons>
+    <ion-title>Borrar Clinica</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="danger" (click)="onDelete()">Borrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding back" mode="md">
+  <ion-card class="ion-padding">
+
+    <div class="di">
+      <img src="assets/15.png" />
+    </div>
+
+    <h2>Clinica: {{Clinica.Nombre}}</h2>
+    <h3>Telefono {{Clinica.metodosContacto[0].Nombre}}</h3>
+    <h4>Correo {{Clinica.metodosContacto[1].Nombre}}</h4>
+  </ion-card>
+  
+</ion-content>
