@@ -1,3 +1,26 @@
-<p>
-  personaje-delete works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="warning" (click)="cancel()">Cancel</ion-button>
+    </ion-buttons>
+    <ion-title>Borrar Usuario</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="primary" (click)="onDelete()">Borrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding back" mode="md">
+  <ion-card class="ion-padding">
+
+    <div class="di">
+      <img src="assets/15.png" />
+    </div>
+
+    <h1>{{personaje.Nombre}}</h1>
+    <h3>{{personaje.Descripcion}}</h3>
+    <h3>Arma: {{personaje.habilidadPersonajes[0]?.habilidad.Nombre}}</h3>
+    <h3>Reino: {{personaje.reinoPersonajes[0]?.reino.Nombre}}</h3>
+    <h3>Señorio: {{personaje.seniorioPersonajes[0]?.seniorio.Nombre}}</h3>
+  </ion-card>
+  
+</ion-content>

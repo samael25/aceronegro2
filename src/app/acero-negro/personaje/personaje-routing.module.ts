@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { PersonajePage } from './personaje.page';
 import { PersonajeDefaultComponent } from './components/personaje-default/personaje-default.component';
+import { PersonajeDetalleComponent } from './components/personaje-detalle/personaje-detalle.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
       {
         path: '',
         component: PersonajeDefaultComponent,
+      },
+      {
+        path: 'detail/:id',
+        component: PersonajeDetalleComponent
       },
     ],
   }

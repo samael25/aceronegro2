@@ -1,0 +1,47 @@
+ion-button {
+    --ion-color-primary: rgb(4, 17, 92);
+    letter-spacing: 5.5px;
+    box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 50px;
+    margin-top: 7px;
+}
+
+.btn-1{
+    --ion-color-primary: rgb(184, 166, 5);
+    letter-spacing: 5.5px;
+}
+
+.di {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid ;
+    --background: rgba(102, 107, 105, 0.2);
+}
+
+h2 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+}
+
+h4 {
+    font-size: 19px;
+    margin-top: 7px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h3 {
+    font-size: 17px;
+    margin-top: 7px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+ion-card {
+    --background: var(--ion-color-dark) url('../../../../../assets/1.png') no-repeat center/cover;
+}

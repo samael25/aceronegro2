@@ -1,3 +1,9 @@
-<p>
-  habilidad-default works!
-</p>
+<ion-content class="ion-padding back">
+  <ion-button shape="round" (click)="openModal({ action: 'add' })" expand="block">
+    Nueva Habilidad
+  </ion-button>
+  <ng-container *ngIf="habilidad">
+    <app-habilidad-table-template [data]="habilidad" (onClickAction)="openModal($event)">
+    </app-habilidad-table-template>
+  </ng-container>
+</ion-content>

@@ -1,0 +1,48 @@
+.back {
+    --background: var(--ion-color-dark) url('../../../../../assets/1.png') no-repeat center/cover;
+}
+
+ion-button {
+    --ion-color-primary: rgb(4, 17, 92);
+    letter-spacing: 5.5px;
+    box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+.btn-2{
+    --ion-color-primary: rgb(189, 7, 16);
+    letter-spacing: 5.5px;
+}
+
+.di {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    margin-top: 15px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid ;
+    --background: rgba(102, 107, 105, 0.2);
+}
+
+h2 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    color: rgb(3, 20, 56);
+}
+
+h4 {
+    font-size: 21px;
+    margin-top: 7px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(235, 248, 187);
+}
+
+.card {
+    --background: var(--ion-color-dark) url('../../../../../assets/1.png') no-repeat center/cover;
+}

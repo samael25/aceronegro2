@@ -1,3 +1,9 @@
-<p>
-  moneda-default works!
-</p>
+<ion-content class="ion-padding back">
+  <ion-button shape="round" (click)="openModal({ action: 'add' })" expand="block">
+    Nueva Moneda
+  </ion-button>
+  <ng-container *ngIf="moneda">
+    <app-moneda-table-template [data]="moneda" (onClickAction)="openModal($event)">
+    </app-moneda-table-template>
+  </ng-container>
+</ion-content>

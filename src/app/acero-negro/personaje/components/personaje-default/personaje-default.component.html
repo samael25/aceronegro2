@@ -1,3 +1,9 @@
-<p>
-  personaje-default works!
-</p>
+<ion-content class="ion-padding back">
+  <ion-button shape="round" (click)="openModal({ action: 'add' })" expand="block">
+    Nuevo Personaje
+  </ion-button>
+  <ng-container *ngIf="personaje">
+    <app-personaje-table-template [data]="personaje" (onClickAction)="openModal($event)">
+    </app-personaje-table-template>
+  </ng-container>
+</ion-content>

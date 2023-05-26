@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { MonedaPage } from './moneda.page';
 import { MonedaDefaultComponent } from './components/moneda-default/moneda-default.component';
+import { MonedaDetalleComponent } from './components/moneda-detalle/moneda-detalle.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
       {
         path: '',
         component: MonedaDefaultComponent,
+      },
+      {
+        path: 'detail/:id',
+        component: MonedaDetalleComponent,
       },
     ],
   }

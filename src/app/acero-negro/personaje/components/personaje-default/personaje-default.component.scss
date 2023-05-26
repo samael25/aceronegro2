@@ -1,0 +1,12 @@
+.back {
+    --background: var(--ion-color-dark) url('../../../../../assets/1.png') no-repeat center/cover;
+}
+
+ion-button {
+    --ion-color-primary: rgb(4, 17, 92);
+    letter-spacing: 5.5px;
+    box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-habilidad-table-template',
@@ -7,8 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HabilidadTableTemplateComponent implements OnInit {
 
-  constructor() { }
+ 
+  _data: any[];
+  @Output('onClickAction') onClickAction: EventEmitter<any>;
+  @Input('data') set data(habilidad: any[]) {
+    this._data = habilidad;
+  }
+  constructor() {
+    this.onClickAction = new EventEmitter<any>();
+  }
 
   ngOnInit() {}
 
+  onClick(action: string, data?: any) {
+    this.onClickAction.emit({
+      action: action,
+      data: data,
+    });
+  }
 }
+
+
+

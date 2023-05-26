@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HabilidadPage } from './habilidad.page';
 import { HabilidadDefaultComponent } from './components/habilidad-default/habilidad-default.component';
+import { HabilidadDetalleComponent } from './components/habilidad-detalle/habilidad-detalle.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
       {
         path: '',
         component: HabilidadDefaultComponent,
+      },
+      {
+        path: 'detail/:id',
+        component: HabilidadDetalleComponent,
       },
     ],
   }

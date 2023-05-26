@@ -1,3 +1,39 @@
-<p>
-  personaje-detalle works!
-</p>
+<ion-content class="back" mode="md">
+  <div class="flex-content">
+    <ion-card class="ion-padding">
+      <div class="di">
+        <img src="assets/15.png" />
+      </div>
+      <ion-item>
+        <h2>{{personaje?.Nombre}}</h2>
+      </ion-item>
+      <ion-item>
+        <h4>{{personaje?.Descripcion}}</h4>
+      </ion-item>
+      <ion-item *ngFor="let item of personaje?.habilidadPersonajes">
+        <ion-label>
+          <h3>Arma: {{item.habilidad.Nombre}}</h3>
+        </ion-label>
+      </ion-item>
+
+      <ion-item *ngFor="let item of personaje?.reinoPersonajes">
+        <ion-label>
+          <h3>Reino: {{item.reino.Nombre}}</h3>
+        </ion-label>
+      </ion-item>
+
+      <ion-item *ngFor="let item of personaje?.seniorioPersonajes">
+        <ion-label>
+          <h3>Señorio: {{item.seniorio.Nombre}}</h3>
+        </ion-label>
+      </ion-item>
+
+      <ion-button (click)="openModal({action: 'add', data: personaje})" shape="round">
+        Editar
+      </ion-button>
+      <ion-button class="btn btn-2" (click)="openModal({action: 'delete', data: personaje})" shape="round">
+        Borrar
+      </ion-button>
+    </ion-card>
+  </div>
+</ion-content>

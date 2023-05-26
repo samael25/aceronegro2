@@ -9,64 +9,76 @@ export class CatalogosService {
 
   // TipoUsuario
 
-  getAllUserType() {
-    return this.httpApiService.httpApi<any>(
+  getAllHabilidad() {
+    return this.httpApiService.httpApi<any[]>(
       HttpRequestMethod.GET,
-      `tipoUsuario/findAll`
+      `habilidad/findAll`
     );
   }
 
-  // Giro
-
-  getAllGiros() {
-    return this.httpApiService.httpApi<any>(
+  
+  getAllSeniorio() {
+    return this.httpApiService.httpApi<any[]>(
       HttpRequestMethod.GET,
-      `giro/findAll`
+      `seniorio/findAll`
     );
   }
 
-  // Roles
-
-  getAllRoles() {
-    return this.httpApiService.httpApi<any>(
+  getAllReino() {
+    return this.httpApiService.httpApi<any[]>(
       HttpRequestMethod.GET,
-      `rol/findAll`
+      `reino/findAll`
     );
   }
 
-  // Clinicas
-
-  getAllClinica() {
-    return this.httpApiService.httpApi<any>(
+  getAllMonedas() {
+    return this.httpApiService.httpApi<any[]>(
       HttpRequestMethod.GET,
-      `clinica/findAll`
+      `moneda/findAll`
     );
   }
 
-  // TipoMetodoContacto
-
-  getAllTipoMetodoContacto() {
-    return this.httpApiService.httpApi<any>(
+  getAllHabilidades() {
+    return this.httpApiService.httpApi<any[]>(
       HttpRequestMethod.GET,
-      `tipoMetodoContacto/findAll`
+      `habilidad/findAll`
     );
   }
 
-  // MetodoContacto
-
-  createMetodoContacto(params: any) {
+  createMoneda(params: any) {
     return this.httpApiService.httpApi(
       HttpRequestMethod.POST,
-      `metodoContacto/create`,
+      `moneda/create`,
       params
     );
   }
 
-  updateMetodoContacto(params: any) {
+  createHabilidad(params: any) {
     return this.httpApiService.httpApi(
-      HttpRequestMethod.PUT,
-      `metodoContacto/update`,
+      HttpRequestMethod.POST,
+      `habilidad/create`,
       params
     );
   }
-}
+
+  getAllPersonaje() {
+    return this.httpApiService.httpApi<any>(
+      HttpRequestMethod.GET,
+      `personaje/findAll`
+    );
+  }
+
+  getMonedaDetail(id: number) {
+    return this.httpApiService.httpApi(
+      HttpRequestMethod.GET,
+      `moneda/findOne/${id}`
+    );
+  }
+
+  getHabilidadDetail(id: number) {
+    return this.httpApiService.httpApi(
+      HttpRequestMethod.GET,
+      `habilidad/findOne/${id}`
+    );
+  }
+  }

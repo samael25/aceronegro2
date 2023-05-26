@@ -1,0 +1,36 @@
+.back {
+    --background: var(--ion-color-dark) url('../../../../../assets/1.png') no-repeat center/cover;
+}
+
+.di {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    margin-top: 10px;
+    // margin-bottom: -30px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid ;
+    --background: rgba(102, 107, 105, 0.2);
+}
+
+ion-title {
+    text-align: center;
+}
+
+.but {
+    --ion-color-primary: rgb(4, 17, 92);
+    letter-spacing: 2px;
+    box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+.mt {
+    margin-top: 13px;
+}
+

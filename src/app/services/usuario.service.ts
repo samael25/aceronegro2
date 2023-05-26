@@ -15,25 +15,33 @@ export class UsuarioService {
     );
   }
 
-  updateUser(params: any) {
+  updatePersonaje(params: any) {
     return this.httpApiService.httpApi(
       HttpRequestMethod.PUT,
-      `usuario/update`,
+      `personaje/update`,
       params
     );
   }
 
-  getAllUsers() {
+  getAllHabilidad() {
     return this.httpApiService.httpApi(
       HttpRequestMethod.GET,
-      `usuario/findAll`
+      `habilidad/findAll`
     );
   }
 
-  getAllConsultorios() {
+  
+  getAllSeniorio() {
+    return this.httpApiService.httpApi(
+      HttpRequestMethod.GET,
+      `seniorio/findAll`
+    );
+  }
+
+  getAllReino() {
     return this.httpApiService.httpApi<any[]>(
       HttpRequestMethod.GET,
-      `consultorio/findAll`
+      `reino/findAll`
     );
   }
 
